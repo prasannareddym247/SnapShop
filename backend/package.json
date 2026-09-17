@@ -1,0 +1,33 @@
+{
+  "name": "snapshop-server",
+  "version": "1.0.0",
+  "description": "SnapShop Backend Express API",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "import": "node import_all_data.js",
+    "validate": "node validate_products.js",
+    "test": "node tests/auth.test.js && node tests/tenant.test.js && node tests/api.test.js",
+    "migrate": "node db/migrate.js",
+    "backup": "node db/backup.js backup",
+    "backup:list": "node db/backup.js list",
+    "backup:restore": "node db/backup.js restore",
+    "healthcheck": "node scripts/healthcheck.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^8.5.2",
+    "helmet": "^8.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "msnodesqlv8": "^5.2.0",
+    "mssql": "^10.0.2",
+    "nodemailer": "^9.0.1",
+    "pdfkit": "^0.15.0",
+    "swagger-ui-express": "^5.0.1"
+  }
+}

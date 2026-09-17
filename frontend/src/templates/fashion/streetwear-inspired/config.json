@@ -1,0 +1,69 @@
+{
+  "id": "streetwear-inspired",
+  "name": "UrbanHype Streetwear",
+  "category": "fashion",
+  "tagline": "Bold streetwear culture — limited drops, premium apparel, and urban lifestyle essentials",
+  "storeName": "UrbanHype",
+  "description": "Premium streetwear storefront with bold dark aesthetics, vibrant accents, and limited-edition drop culture.",
+  "palette": {
+    "primary": "#ff2d55",
+    "secondary": "#ff6b35",
+    "accent": "#0a0a0a",
+    "bg": "#0a0a0a",
+    "bgAlt": "#1a1a1a",
+    "surface": "#222222",
+    "text": "#ffffff",
+    "textMuted": "#888888",
+    "border": "#333333",
+    "success": "#00e676",
+    "error": "#ff1744"
+  },
+  "typography": {
+    "headingFont": "Bebas Neue, sans-serif",
+    "bodyFont": "Inter, sans-serif",
+    "accentFont": "Poppins, sans-serif"
+  },
+  "spacing": {
+    "xs": "0.25rem",
+    "sm": "0.5rem",
+    "md": "1rem",
+    "lg": "1.5rem",
+    "xl": "2rem",
+    "2xl": "3rem"
+  },
+  "borderRadius": {
+    "sm": "0",
+    "md": "0",
+    "lg": "0"
+  },
+  "headerVariant": "default",
+  "headerSticky": true,
+  "footerColumns": [
+    {
+      "title": "Quick Links",
+      "links": ["New Drops", "Men", "Women", "Sneakers", "Apparel", "Accessories"]
+    },
+    {
+      "title": "Collections",
+      "links": ["Limited Edition", "Exclusive Drops", "Collaborations", "Archives", "Lookbook"]
+    },
+    {
+      "title": "Support",
+      "links": ["About", "Contact", "Shipping & Returns", "FAQs", "Privacy Policy", "Terms"]
+    }
+  ],
+  "socialLinks": [
+    { "icon": "📸", "label": "Instagram" },
+    { "icon": "🐦", "label": "Twitter/X" },
+    { "icon": "📘", "label": "Facebook" },
+    { "icon": "🎵", "label": "TikTok" },
+    { "icon": "▶️", "label": "YouTube" }
+  ],
+  "previewPanel": {
+    "templateName": "UrbanHype Streetwear",
+    "category": "Streetwear & Urban Fashion",
+    "style": "Bold · Modern · Urban",
+    "bestFor": "Streetwear, Sneakers, Hoodies, Apparel, Accessories, Lifestyle Brands",
+    "responsive": "Desktop · Tablet · Mobile"
+  }
+}

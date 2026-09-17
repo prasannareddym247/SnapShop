@@ -1,0 +1,78 @@
+{
+  "id": "gadgets-inspired",
+  "name": "GizmoHub Gadgets",
+  "category": "electronics",
+  "tagline": "Smart innovative gadgets for absolute convenience",
+  "storeName": "GizmoHub",
+  "description": "Smart self-watering plant pots, visual e-readers, pocket projections, and mini humidifiers.",
+  "palette": {
+    "primary": "#4caf50",
+    "secondary": "#3f51b5",
+    "accent": "#ff5722",
+    "bg": "#f1f8e9",
+    "bgAlt": "#e8f5e9",
+    "surface": "#ffffff",
+    "text": "#212121",
+    "textMuted": "#757575",
+    "border": "#c8e6c9",
+    "success": "#4caf50",
+    "error": "#f44336"
+  },
+  "darkPalette": {
+    "primary": "#81c784",
+    "secondary": "#7986cb",
+    "accent": "#ff5722",
+    "bg": "#1b241c",
+    "surface": "#2e3a2f",
+    "text": "#e8f5e9",
+    "textMuted": "#757575",
+    "border": "#c8e6c9",
+    "success": "#66bb6a",
+    "error": "#ef5350"
+  },
+  "typography": {
+    "headingFont": "Share Tech, sans-serif",
+    "bodyFont": "Rajdhani, sans-serif",
+    "accentFont": "Electrolize"
+  },
+  "spacing": {
+    "xs": "0.25rem",
+    "sm": "0.5rem",
+    "md": "1rem",
+    "lg": "1.5rem",
+    "xl": "2rem",
+    "2xl": "3rem"
+  },
+  "borderRadius": {
+    "sm": "8px",
+    "md": "12px",
+    "lg": "20px"
+  },
+  "headerVariant": "default",
+  "headerSticky": true,
+  "footerColumns": [
+    {
+      "title": "Gadgets",
+      "links": [
+        "Pocket Projectors",
+        "Tracking Tags",
+        "Smart Bottles",
+        "E-Readers"
+      ]
+    }
+  ],
+  "socialLinks": [
+    {
+      "icon": "📸",
+      "label": "Instagram"
+    },
+    {
+      "icon": "🐦",
+      "label": "Twitter"
+    },
+    {
+      "icon": "📘",
+      "label": "Facebook"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "id": "nike-performance-inspired",
+  "name": "Swoosh Pro Athletes",
+  "category": "sports",
+  "tagline": "Elite high-intensity sportswear and footwear",
+  "storeName": "Swoosh Pro Athletics",
+  "description": "Engineered spikes, running socks, sweatbands, vaporfly shoes, and active jackets.",
+  "palette": {
+    "primary": "#111827",
+    "secondary": "#ff3d00",
+    "accent": "#ffffff",
+    "bg": "#f3f4f6",
+    "bgAlt": "#e5e7eb",
+    "surface": "#ffffff",
+    "text": "#111827",
+    "textMuted": "#4b5563",
+    "border": "#e5e7eb",
+    "success": "#4caf50",
+    "error": "#f44336"
+  },
+  "darkPalette": {
+    "primary": "#ffffff",
+    "secondary": "#ff3d00",
+    "accent": "#ffffff",
+    "bg": "#000000",
+    "surface": "#111827",
+    "text": "#f3f4f6",
+    "textMuted": "#4b5563",
+    "border": "#e5e7eb",
+    "success": "#66bb6a",
+    "error": "#ef5350"
+  },
+  "typography": {
+    "headingFont": "Teko, sans-serif",
+    "bodyFont": "Oswald, sans-serif",
+    "accentFont": "Arial Black"
+  },
+  "spacing": {
+    "xs": "0.25rem",
+    "sm": "0.5rem",
+    "md": "1rem",
+    "lg": "1.5rem",
+    "xl": "2rem",
+    "2xl": "3rem"
+  },
+  "borderRadius": {
+    "sm": "0px",
+    "md": "2px",
+    "lg": "4px"
+  },
+  "headerVariant": "default",
+  "headerSticky": true,
+  "footerColumns": [
+    {
+      "title": "Athletics",
+      "links": [
+        "Marathon Shoes",
+        "Singlets",
+        "Track Pants",
+        "GPS Watches"
+      ]
+    }
+  ],
+  "socialLinks": [
+    {
+      "icon": "📸",
+      "label": "Instagram"
+    },
+    {
+      "icon": "🐦",
+      "label": "Twitter"
+    },
+    {
+      "icon": "📘",
+      "label": "Facebook"
+    }
+  ]
+}

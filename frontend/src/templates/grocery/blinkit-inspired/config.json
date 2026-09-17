@@ -1,0 +1,79 @@
+{
+  "id": "blinkit-inspired",
+  "name": "BlinkCart Quick",
+  "category": "grocery",
+  "tagline": "Fresh groceries delivered in 10 minutes",
+  "storeName": "BlinkCart",
+  "description": "Farm-fresh milk, bread, eggs, cooking oil, instant snacks, and cold beverages.",
+  "palette": {
+    "primary": "#f59e0b",
+    "secondary": "#10b981",
+    "accent": "#f59e0b",
+    "bg": "#fffbeb",
+    "bgAlt": "#fef3c7",
+    "surface": "#ffffff",
+    "text": "#1f2937",
+    "textMuted": "#6b7280",
+    "border": "#fde68a",
+    "success": "#4caf50",
+    "error": "#f44336"
+  },
+  "darkPalette": {
+    "primary": "#fbbf24",
+    "secondary": "#34d399",
+    "accent": "#f59e0b",
+    "bg": "#1e1b15",
+    "surface": "#2e2518",
+    "text": "#fffbeb",
+    "textMuted": "#6b7280",
+    "border": "#fde68a",
+    "success": "#66bb6a",
+    "error": "#ef5350"
+  },
+  "typography": {
+    "headingFont": "Inter, sans-serif",
+    "bodyFont": "Inter, sans-serif",
+    "accentFont": "Arial Black"
+  },
+  "spacing": {
+    "xs": "0.25rem",
+    "sm": "0.5rem",
+    "md": "1rem",
+    "lg": "1.5rem",
+    "xl": "2rem",
+    "2xl": "3rem"
+  },
+  "borderRadius": {
+    "sm": "0.25rem",
+    "md": "0.5rem",
+    "lg": "0.75rem"
+  },
+  "headerVariant": "default",
+  "headerSticky": true,
+  "footerColumns": [
+    {
+      "title": "Categories",
+      "links": [
+        "Vegetables",
+        "Dairy & Eggs",
+        "Atta & Rice",
+        "Beverages",
+        "Instant Food"
+      ]
+    }
+  ],
+  "socialLinks": [
+    {
+      "icon": "📸",
+      "label": "Instagram"
+    },
+    {
+      "icon": "🐦",
+      "label": "Twitter"
+    },
+    {
+      "icon": "📘",
+      "label": "Facebook"
+    }
+  ]
+}

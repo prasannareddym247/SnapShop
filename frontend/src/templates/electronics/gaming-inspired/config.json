@@ -1,0 +1,79 @@
+{
+  "id": "gaming-inspired",
+  "name": "Nexus Gaming",
+  "category": "electronics",
+  "tagline": "Ultimate gear for competitive gamers",
+  "storeName": "Nexus Gaming",
+  "description": "Heavy cooling PC cabinets, mechanical keyboards, gaming mice, and VR headsets.",
+  "palette": {
+    "primary": "#9c27b0",
+    "secondary": "#00e5ff",
+    "accent": "#ff0055",
+    "bg": "#0d021a",
+    "bgAlt": "#1a0533",
+    "surface": "#1c0a35",
+    "text": "#00ffcc",
+    "textMuted": "#ab8df2",
+    "border": "#4a154b",
+    "success": "#4caf50",
+    "error": "#f44336"
+  },
+  "darkPalette": {
+    "primary": "#d500f9",
+    "secondary": "#00e5ff",
+    "accent": "#ff0055",
+    "bg": "#090112",
+    "surface": "#150328",
+    "text": "#e1f5fe",
+    "textMuted": "#ab8df2",
+    "border": "#4a154b",
+    "success": "#66bb6a",
+    "error": "#ef5350"
+  },
+  "typography": {
+    "headingFont": "Orbitron, sans-serif",
+    "bodyFont": "Share Tech Mono, monospace",
+    "accentFont": "Russo One"
+  },
+  "spacing": {
+    "xs": "0.25rem",
+    "sm": "0.5rem",
+    "md": "1rem",
+    "lg": "1.5rem",
+    "xl": "2rem",
+    "2xl": "3rem"
+  },
+  "borderRadius": {
+    "sm": "4px",
+    "md": "8px",
+    "lg": "16px"
+  },
+  "headerVariant": "default",
+  "headerSticky": true,
+  "footerColumns": [
+    {
+      "title": "Gaming",
+      "links": [
+        "Keyboards",
+        "Mice",
+        "Cabinets",
+        "Headsets",
+        "GPUs"
+      ]
+    }
+  ],
+  "socialLinks": [
+    {
+      "icon": "📸",
+      "label": "Instagram"
+    },
+    {
+      "icon": "🐦",
+      "label": "Twitter"
+    },
+    {
+      "icon": "📘",
+      "label": "Facebook"
+    }
+  ]
+}

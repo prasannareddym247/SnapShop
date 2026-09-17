@@ -1,0 +1,112 @@
+const SUBSCRIPTION_PLANS = [
+  {
+    key: 'starter',
+    name: 'Starter',
+    description: 'For growing businesses ready to scale',
+    priceINR: 499,
+    priceUSD: 6,
+    currency: 'INR',
+    billingCycle: 'monthly',
+    trialDays: 14,
+    isActive: true,
+    isRecommended: true,
+    sortOrder: 1,
+    badge: 'MOST POPULAR',
+    features: [
+      { text: '500 Products', included: true },
+      { text: 'Unlimited Orders', included: true },
+      { text: '500 MB Storage', included: true },
+      { text: '5 Themes', included: true },
+      { text: 'Custom Domain', included: true },
+      { text: '2 Staff Accounts', included: true },
+      { text: 'Marketing Tools', included: true },
+      { text: 'Basic Reports', included: true },
+      { text: 'API Access', included: false },
+      { text: 'Priority Support', included: false }
+    ]
+  },
+  {
+    key: 'professional',
+    name: 'Professional',
+    description: 'Advanced tools for serious merchants',
+    priceINR: 999,
+    priceUSD: 12,
+    currency: 'INR',
+    billingCycle: 'monthly',
+    trialDays: 14,
+    isActive: true,
+    isRecommended: false,
+    sortOrder: 2,
+    badge: 'BEST VALUE',
+    features: [
+      { text: 'Unlimited Products', included: true },
+      { text: 'Unlimited Orders', included: true },
+      { text: '2 GB Storage', included: true },
+      { text: '10 Themes', included: true },
+      { text: 'Custom Domain', included: true },
+      { text: '5 Staff Accounts', included: true },
+      { text: 'API Access', included: true },
+      { text: 'Priority Support', included: true },
+      { text: 'Marketing Tools', included: true },
+      { text: 'Advanced Analytics', included: true },
+      { text: 'Full Reports', included: true }
+    ]
+  },
+  {
+    key: 'business',
+    name: 'Business',
+    description: 'Complete solution for high-volume sellers',
+    priceINR: 1999,
+    priceUSD: 24,
+    currency: 'INR',
+    billingCycle: 'monthly',
+    trialDays: 14,
+    isActive: true,
+    isRecommended: false,
+    sortOrder: 3,
+    badge: '',
+    features: [
+      { text: 'Unlimited Products', included: true },
+      { text: 'Unlimited Orders', included: true },
+      { text: '5 GB Storage', included: true },
+      { text: 'All Themes', included: true },
+      { text: 'Custom Domain', included: true },
+      { text: '15 Staff Accounts', included: true },
+      { text: 'API Access', included: true },
+      { text: 'Priority Support', included: true },
+      { text: 'Marketing Tools', included: true },
+      { text: 'Advanced Analytics', included: true },
+      { text: 'Full Reports', included: true }
+    ]
+  },
+  {
+    key: 'enterprise',
+    name: 'Enterprise',
+    description: 'Custom solutions for large operations',
+    priceINR: 4999,
+    priceUSD: 60,
+    currency: 'INR',
+    billingCycle: 'monthly',
+    trialDays: 14,
+    isActive: true,
+    isRecommended: false,
+    sortOrder: 4,
+    badge: '',
+    features: [
+      { text: 'Unlimited Products', included: true },
+      { text: 'Unlimited Orders', included: true },
+      { text: 'Unlimited Storage', included: true },
+      { text: 'All Themes', included: true },
+      { text: 'Custom Domain', included: true },
+      { text: 'Unlimited Staff', included: true },
+      { text: 'API Access', included: true },
+      { text: 'Dedicated Support', included: true },
+      { text: 'Marketing Tools', included: true },
+      { text: 'Advanced Analytics', included: true },
+      { text: 'Full Reports', included: true },
+      { text: 'White-label Checkout', included: true }
+    ]
+  }
+];
+
+export default SUBSCRIPTION_PLANS;

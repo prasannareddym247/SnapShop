@@ -1,0 +1,79 @@
+{
+  "id": "amazon-tech-inspired",
+  "name": "MegaTech Shop",
+  "category": "electronics",
+  "tagline": "Best deals on all laptops, phones, and devices",
+  "storeName": "MegaTech Store",
+  "description": "Bulk electronics catalog. Fast delivery on routers, headphones, cables, and peripherals.",
+  "palette": {
+    "primary": "#ff9900",
+    "secondary": "#146eb4",
+    "accent": "#232f3e",
+    "bg": "#eaeded",
+    "bgAlt": "#cfd4d4",
+    "surface": "#ffffff",
+    "text": "#111111",
+    "textMuted": "#565959",
+    "border": "#ccccff",
+    "success": "#4caf50",
+    "error": "#f44336"
+  },
+  "darkPalette": {
+    "primary": "#ffb74d",
+    "secondary": "#90caf9",
+    "accent": "#232f3e",
+    "bg": "#1e272c",
+    "surface": "#232f3e",
+    "text": "#f5f7f8",
+    "textMuted": "#565959",
+    "border": "#ccccff",
+    "success": "#66bb6a",
+    "error": "#ef5350"
+  },
+  "typography": {
+    "headingFont": "Arial, sans-serif",
+    "bodyFont": "sans-serif",
+    "accentFont": "Trebuchet MS"
+  },
+  "spacing": {
+    "xs": "0.25rem",
+    "sm": "0.5rem",
+    "md": "1rem",
+    "lg": "1.5rem",
+    "xl": "2rem",
+    "2xl": "3rem"
+  },
+  "borderRadius": {
+    "sm": "4px",
+    "md": "8px",
+    "lg": "12px"
+  },
+  "headerVariant": "default",
+  "headerSticky": true,
+  "footerColumns": [
+    {
+      "title": "Deals",
+      "links": [
+        "Daily Offer",
+        "PC Parts",
+        "Cables",
+        "Powerbanks",
+        "Smart Bulbs"
+      ]
+    }
+  ],
+  "socialLinks": [
+    {
+      "icon": "📸",
+      "label": "Instagram"
+    },
+    {
+      "icon": "🐦",
+      "label": "Twitter"
+    },
+    {
+      "icon": "📘",
+      "label": "Facebook"
+    }
+  ]
+}

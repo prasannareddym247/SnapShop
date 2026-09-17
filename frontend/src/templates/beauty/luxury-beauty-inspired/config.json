@@ -1,0 +1,78 @@
+{
+  "id": "luxury-beauty-inspired",
+  "name": "Maison de Beaute",
+  "category": "beauty",
+  "tagline": "Elite custom-formulated beauty products",
+  "storeName": "Maison de Beaute",
+  "description": "Premium gold-infused makeup, luxury moisturizing oils, and elite designer cosmetics.",
+  "palette": {
+    "primary": "#9c27b0",
+    "secondary": "#ab47bc",
+    "accent": "#e1bee7",
+    "bg": "#f3e5f5",
+    "bgAlt": "#e1bee7",
+    "surface": "#ffffff",
+    "text": "#4a148c",
+    "textMuted": "#7b1fa2",
+    "border": "#e1bee7",
+    "success": "#4caf50",
+    "error": "#f44336"
+  },
+  "darkPalette": {
+    "primary": "#e1bee7",
+    "secondary": "#ab47bc",
+    "accent": "#e1bee7",
+    "bg": "#210029",
+    "surface": "#4a148c",
+    "text": "#f3e5f5",
+    "textMuted": "#7b1fa2",
+    "border": "#e1bee7",
+    "success": "#66bb6a",
+    "error": "#ef5350"
+  },
+  "typography": {
+    "headingFont": "Didot, serif",
+    "bodyFont": "Georgia, serif",
+    "accentFont": "Cinzel Decorative"
+  },
+  "spacing": {
+    "xs": "0.25rem",
+    "sm": "0.5rem",
+    "md": "1rem",
+    "lg": "1.5rem",
+    "xl": "2rem",
+    "2xl": "3rem"
+  },
+  "borderRadius": {
+    "sm": "0.5rem",
+    "md": "0.75rem",
+    "lg": "1rem"
+  },
+  "headerVariant": "default",
+  "headerSticky": true,
+  "footerColumns": [
+    {
+      "title": "Maison",
+      "links": [
+        "Gold Collection",
+        "Perfumes",
+        "Anti-Aging",
+        "Palettes"
+      ]
+    }
+  ],
+  "socialLinks": [
+    {
+      "icon": "📸",
+      "label": "Instagram"
+    },
+    {
+      "icon": "🐦",
+      "label": "Twitter"
+    },
+    {
+      "icon": "📘",
+      "label": "Facebook"
+    }
+  ]
+}

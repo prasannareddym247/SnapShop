@@ -1,0 +1,78 @@
+{
+  "id": "makeup-inspired",
+  "name": "ColorStudio Pro",
+  "category": "beauty",
+  "tagline": "Professional-grade palettes and shades for every look",
+  "storeName": "ColorStudio",
+  "description": "High-pigmented professional-grade eyeshadows, liquid lipsticks, highlighters, and brushes.",
+  "palette": {
+    "primary": "#e91e63",
+    "secondary": "#00e5ff",
+    "accent": "#ff4081",
+    "bg": "#fce4ec",
+    "bgAlt": "#f8bbd0",
+    "surface": "#ffffff",
+    "text": "#212121",
+    "textMuted": "#727272",
+    "border": "#e2e8f0",
+    "success": "#4caf50",
+    "error": "#f44336"
+  },
+  "darkPalette": {
+    "primary": "#ff4081",
+    "secondary": "#00e5ff",
+    "accent": "#ff4081",
+    "bg": "#210c14",
+    "surface": "#301c24",
+    "text": "#fcdbe3",
+    "textMuted": "#727272",
+    "border": "#e2e8f0",
+    "success": "#66bb6a",
+    "error": "#ef5350"
+  },
+  "typography": {
+    "headingFont": "Helvetica, Arial, sans-serif",
+    "bodyFont": "Inter, sans-serif",
+    "accentFont": "Bungee"
+  },
+  "spacing": {
+    "xs": "0.25rem",
+    "sm": "0.5rem",
+    "md": "1rem",
+    "lg": "1.5rem",
+    "xl": "2rem",
+    "2xl": "3rem"
+  },
+  "borderRadius": {
+    "sm": "0.25rem",
+    "md": "0.5rem",
+    "lg": "0.75rem"
+  },
+  "headerVariant": "default",
+  "headerSticky": true,
+  "footerColumns": [
+    {
+      "title": "Makeup",
+      "links": [
+        "Palettes",
+        "Lipsticks",
+        "Concealers",
+        "Setting Spray"
+      ]
+    }
+  ],
+  "socialLinks": [
+    {
+      "icon": "📸",
+      "label": "Instagram"
+    },
+    {
+      "icon": "🐦",
+      "label": "Twitter"
+    },
+    {
+      "icon": "📘",
+      "label": "Facebook"
+    }
+  ]
+}

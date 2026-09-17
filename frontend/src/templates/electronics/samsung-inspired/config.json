@@ -1,0 +1,79 @@
+{
+  "id": "samsung-inspired",
+  "name": "Galaxy Universe",
+  "category": "electronics",
+  "tagline": "Innovate your home and mobile experiences",
+  "storeName": "Galaxy Mall",
+  "description": "Flagship foldable phones, smart smart TVs, laundry machines, monitors, and soundbars.",
+  "palette": {
+    "primary": "#0a5cff",
+    "secondary": "#000000",
+    "accent": "#ffcc00",
+    "bg": "#f6f8fa",
+    "bgAlt": "#eef2f6",
+    "surface": "#ffffff",
+    "text": "#000000",
+    "textMuted": "#687076",
+    "border": "#dfe3e6",
+    "success": "#4caf50",
+    "error": "#f44336"
+  },
+  "darkPalette": {
+    "primary": "#3b82f6",
+    "secondary": "#ffffff",
+    "accent": "#ffcc00",
+    "bg": "#0c0f12",
+    "surface": "#191f24",
+    "text": "#eceef0",
+    "textMuted": "#687076",
+    "border": "#dfe3e6",
+    "success": "#66bb6a",
+    "error": "#ef5350"
+  },
+  "typography": {
+    "headingFont": "Samsung Sans, sans-serif",
+    "bodyFont": "Inter, sans-serif",
+    "accentFont": "Arial Black"
+  },
+  "spacing": {
+    "xs": "0.25rem",
+    "sm": "0.5rem",
+    "md": "1rem",
+    "lg": "1.5rem",
+    "xl": "2rem",
+    "2xl": "3rem"
+  },
+  "borderRadius": {
+    "sm": "1rem",
+    "md": "1.5rem",
+    "lg": "2rem"
+  },
+  "headerVariant": "default",
+  "headerSticky": true,
+  "footerColumns": [
+    {
+      "title": "Galaxy",
+      "links": [
+        "Foldable Phones",
+        "Ultra series",
+        "Smart TVs",
+        "SSD Drive",
+        "Monitors"
+      ]
+    }
+  ],
+  "socialLinks": [
+    {
+      "icon": "📸",
+      "label": "Instagram"
+    },
+    {
+      "icon": "🐦",
+      "label": "Twitter"
+    },
+    {
+      "icon": "📘",
+      "label": "Facebook"
+    }
+  ]
+}

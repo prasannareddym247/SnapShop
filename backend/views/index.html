@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SnapShop - API Views Directory</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0f172a;
+      --panel-dark: #1e293b;
+      --primary: #10b981;
+      --primary-light: #34d399;
+      --accent: #3b82f6;
+      --danger: #ef4444;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --radius: 12px;
+      --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--primary-light), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .card {
+      background-color: var(--panel-dark);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .role-badge {
+      display: inline-block;
+      padding: 0.35rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 1.5rem;
+    }
+
+    .badge-guest {
+      background-color: rgba(16, 185, 129, 0.15);
+      color: var(--primary-light);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .badge-customer {
+      background-color: rgba(59, 130, 246, 0.15);
+      color: #60a5fa;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+
+    .badge-admin {
+      background-color: rgba(239, 68, 68, 0.15);
+      color: #f87171;
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .desc {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .endpoints-list {
+      list-style: none;
+    }
+
+    .endpoint-item {
+      background: rgba(0, 0, 0, 0.2);
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      margin-bottom: 0.75rem;
+      font-family: monospace;
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .method {
+      font-weight: bold;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+    }
+
+    .method-get { background: rgba(16, 185, 129, 0.2); color: var(--primary-light); }
+    .method-post { background: rgba(59, 130, 246, 0.2); color: #60a5fa; }
+    .method-put { background: rgba(245, 158, 11, 0.2); color: #fbbf24; }
+    .method-delete { background: rgba(239, 68, 68, 0.2); color: #f87171; }
+
+    .path {
+      color: #cbd5e1;
+      flex-grow: 1;
+      margin-left: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>SnapShop</h1>
+      <p class="subtitle">Secure Role-Based Backend API Endpoint Directories</p>
+    </header>
+
+    <div class="grid">
+      <!-- Guest API Views -->
+      <div class="card">
+        <span class="role-badge badge-guest">Guest / Public</span>
+        <h2>🌐 Public Storefront Views</h2>
+        <p class="desc">No authentication required. Accessible to all website visitors and search engines.</p>
+        <ul class="endpoints-list">
+          <li class="endpoint-item">
+            <span class="method method-get">GET</span>
+            <span class="path">/api/products</span>
+          </li>
+          <li class="endpoint-item">
+            <span class="method method-get">GET</span>
+            <span class="path">/api/products/:id</span>
+          </li>
+          <li class="endpoint-item">
+            <span class="method method-post">POST</span>
+            <span class="path">/api/auth/register</span>
+          </li>
+          <li class="endpoint-item">
+            <span class="method method-post">POST</span>
+            <span class="path">/api/auth/login</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Customer API Views -->
+      <div class="card">
+        <span class="role-badge badge-customer">Registered Customer</span>
+        <h2>🛍️ Customer Account Views</h2>
+        <p class="desc">Requires a valid customer login token. Accessible only to logged-in buyers.</p>
+        <ul class="endpoints-list">
+          <li class="endpoint-item">
+            <span class="method method-get">GET</span>
+            <span class="path">/api/cart</span>
+          </li>
+          <li class="endpoint-item">
+            <span class="method method-post">POST</span>
+            <span class="path">/api/cart/items</span>
+          </li>
+          <li class="endpoint-item">
+            <span class="method method-get">GET</span>
+            <span class="path">/api/orders</span>
+          </li>
+          <li class="endpoint-item">
+            <span class="method method-post">POST</span>
+            <span class="path">/api/checkout</span>
+          </li>
+          <li class="endpoint-item">
+            <span class="method method-get">GET</span>
+            <span class="path">/api/orders/:id/invoice</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Admin API Views -->
+      <div class="card">
+        <span class="role-badge badge-admin">Portal Administrator</span>
+        <h2>🔑 Administrative Views</h2>
+        <p class="desc">Requires a valid admin JWT token. Restricts all operations to verified admins.</p>
+        <ul class="endpoints-list">
+          <li class="endpoint-item">
+            <span class="method method-post">POST</span>
+            <span class="path">/api/admin/products</span>
+          </li>
+          <li class="endpoint-item">
+            <span class="method method-put">PUT</span>
+            <span class="path">/api/admin/products/:id</span>
+          </li>
+          <li class="endpoint-item">
+            <span class="method method-delete">DELETE</span>
+            <span class="path">/api/admin/products/:id</span>
+          </li>
+          <li class="endpoint-item">
+            <span class="method method-get">GET</span>
+            <span class="path">/api/admin/orders</span>
+          </li>
+          <li class="endpoint-item">
+            <span class="method method-post">POST</span>
+            <span class="path">/api/ai/generate-content</span>
+          </li>
+          <li class="endpoint-item">
+            <span class="method method-post">POST</span>
+            <span class="path">/api/ai/generate-image</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 SnapShop Express. All views secured via JSON Web Tokens &amp; Knex middlewares.</p>
+    </footer>
+  </div>
+</body>
+</html>

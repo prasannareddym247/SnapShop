@@ -1,0 +1,78 @@
+{
+  "id": "bike-inspired",
+  "name": "MotoGear Rider",
+  "category": "automotive",
+  "tagline": "Helmets, gloves, jackets, and custom bike parts",
+  "storeName": "MotoGear",
+  "description": "DOT certified helmets, leather carbon-knuckle riding gloves, exhaust pipes, and chain kits.",
+  "palette": {
+    "primary": "#f59e0b",
+    "secondary": "#111111",
+    "accent": "#f59e0b",
+    "bg": "#fffbeb",
+    "bgAlt": "#fef3c7",
+    "surface": "#ffffff",
+    "text": "#1f2937",
+    "textMuted": "#4b5563",
+    "border": "#fde68a",
+    "success": "#4caf50",
+    "error": "#f44336"
+  },
+  "darkPalette": {
+    "primary": "#fbbf24",
+    "secondary": "#e5e7eb",
+    "accent": "#f59e0b",
+    "bg": "#1e1a12",
+    "surface": "#2d2516",
+    "text": "#fffbeb",
+    "textMuted": "#4b5563",
+    "border": "#fde68a",
+    "success": "#66bb6a",
+    "error": "#ef5350"
+  },
+  "typography": {
+    "headingFont": "Oswald, sans-serif",
+    "bodyFont": "Montserrat, sans-serif",
+    "accentFont": "Impact"
+  },
+  "spacing": {
+    "xs": "0.25rem",
+    "sm": "0.5rem",
+    "md": "1rem",
+    "lg": "1.5rem",
+    "xl": "2rem",
+    "2xl": "3rem"
+  },
+  "borderRadius": {
+    "sm": "4px",
+    "md": "8px",
+    "lg": "12px"
+  },
+  "headerVariant": "default",
+  "headerSticky": true,
+  "footerColumns": [
+    {
+      "title": "Moto Gear",
+      "links": [
+        "DOT Helmets",
+        "Leather Gloves",
+        "Exhausts",
+        "Chain Kits"
+      ]
+    }
+  ],
+  "socialLinks": [
+    {
+      "icon": "📸",
+      "label": "Instagram"
+    },
+    {
+      "icon": "🐦",
+      "label": "Twitter"
+    },
+    {
+      "icon": "📘",
+      "label": "Facebook"
+    }
+  ]
+}

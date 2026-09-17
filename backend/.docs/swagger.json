@@ -1,0 +1,480 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "SnapShop E-Commerce REST API",
+    "description": "API documentation for the SnapShop E-Commerce application, covering authentication, product catalog, orders management, admin CRUD panels, and Gemini AI-powered content and mockup generators.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:5000/api",
+      "description": "Local Development Server"
+    }
+  ],
+  "paths": {
+    "/auth/register": {
+      "post": {
+        "summary": "Register a new user",
+        "description": "Creates a new customer (B2C/B2B) account with hashed credentials.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["email", "password", "firstName", "lastName"],
+                "properties": {
+                  "email": { "type": "string", "example": "testuser@gmail.com" },
+                  "password": { "type": "string", "example": "password123" },
+                  "firstName": { "type": "string", "example": "John" },
+                  "lastName": { "type": "string", "example": "Doe" },
+                  "phone": { "type": "string", "example": "9876543210" },
+                  "gstin": { "type": "string", "example": "22AAAAA0000A1Z5" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Registration successful, returns JWT token.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "token": { "type": "string" },
+                    "user": { "type": "object" }
+                  }
+                }
+              }
+            }
+          },
+          "400": { "description": "Email already exists or invalid fields." }
+        }
+      }
+    },
+    "/auth/login": {
+      "post": {
+        "summary": "User authentication (Login)",
+        "description": "Validates email and password, returning a JWT bearer token.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["email", "password"],
+                "properties": {
+                  "email": { "type": "string", "example": "admin@snapshop.com" },
+                  "password": { "type": "string", "example": "admin123" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Login successful, returns session token.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "token": { "type": "string" },
+                    "user": { "type": "object" }
+                  }
+                }
+              }
+            }
+          },
+          "400": { "description": "Invalid email or password." }
+        }
+      }
+    },
+    "/auth/me": {
+      "get": {
+        "summary": "Get current profile session details",
+        "description": "Decodes session details using the JWT bearer token.",
+        "security": [{ "BearerAuth": [] }],
+        "responses": {
+          "200": {
+            "description": "Returns current logged in user details.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "user": { "type": "object" }
+                  }
+                }
+              }
+            }
+          },
+          "401": { "description": "Unauthorized/Missing Token." }
+        }
+      }
+    },
+    "/products": {
+      "get": {
+        "summary": "Get full products catalog list",
+        "description": "Retrieves all active catalog products including category identifiers and nested weight pack-size variants.",
+        "responses": {
+          "200": {
+            "description": "List of active products.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "type": "object" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/products/{id}": {
+      "get": {
+        "summary": "Get single product detail",
+        "description": "Retrieves full attributes, metadata, and packaging descriptors for a specific product ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "integer" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Product details successfully retrieved.",
+            "content": {
+              "application/json": {
+                "schema": { "type": "object" }
+              }
+            }
+          },
+          "404": { "description": "Product not found." }
+        }
+      }
+    },
+    "/orders": {
+      "post": {
+        "summary": "Submit a customer checkout order",
+        "description": "Processes cart items, runs transactional inventory deductions, and logs Razorpay payment simulation records.",
+        "security": [{ "BearerAuth": [] }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["items", "totalAmount", "taxAmount", "shippingAmount", "paymentGateway", "transactionId"],
+                "properties": {
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": ["variantId", "quantity", "unitPrice", "taxAmount"],
+                      "properties": {
+                        "variantId": { "type": "integer" },
+                        "quantity": { "type": "integer" },
+                        "unitPrice": { "type": "number" },
+                        "taxAmount": { "type": "number" }
+                      }
+                    }
+                  },
+                  "totalAmount": { "type": "number", "example": 350 },
+                  "taxAmount": { "type": "number", "example": 42 },
+                  "shippingAmount": { "type": "number", "example": 0 },
+                  "paymentGateway": { "type": "string", "example": "Razorpay" },
+                  "transactionId": { "type": "string", "example": "pay_XYZ123ABC" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Order submitted and checked out successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": { "type": "boolean" },
+                    "orderId": { "type": "integer" }
+                  }
+                }
+              }
+            }
+          },
+          "400": { "description": "OutOfStock levels or missing payment reference." }
+        }
+      },
+      "get": {
+        "summary": "Get authenticated user's order history",
+        "description": "Retrieves the list of previous order submissions for the authenticated user session.",
+        "security": [{ "BearerAuth": [] }],
+        "responses": {
+          "200": {
+            "description": "List of user orders.",
+            "content": {
+              "application/json": {
+                "schema": { "type": "array", "items": { "type": "object" } }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/orders/{id}/invoice": {
+      "get": {
+        "summary": "Download PDF tax invoice",
+        "description": "Generates and downloads a custom GST-compliant tax invoice PDF dynamically.",
+        "security": [{ "BearerAuth": [] }],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "integer" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns PDF binary stream.",
+            "content": {
+              "application/pdf": {
+                "schema": { "type": "string", "format": "binary" }
+              }
+            }
+          },
+          "404": { "description": "Order not found." }
+        }
+      }
+    },
+    "/admin/products": {
+      "post": {
+        "summary": "Add a new product (Admin Only)",
+        "description": "Creates a new catalog product profile, attributes, and pack variants.",
+        "security": [{ "BearerAuth": [] }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["name", "category", "description", "storageInstructions", "variants"],
+                "properties": {
+                  "name": { "type": "string", "example": "Premium Red Gram" },
+                  "category": { "type": "string", "example": "Grains" },
+                  "description": { "type": "string" },
+                  "storageInstructions": { "type": "string" },
+                  "imageUrl": { "type": "string" },
+                  "imagePrompt": { "type": "string" },
+                  "bullets": { "type": "array", "items": { "type": "string" } },
+                  "variants": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": ["weightGrams", "price", "stock"],
+                      "properties": {
+                        "weightGrams": { "type": "integer", "example": 500 },
+                        "price": { "type": "number", "example": 120 },
+                        "stock": { "type": "integer", "example": 100 }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": { "description": "Product added successfully." },
+          "403": { "description": "Access Forbidden: Require Admin permissions." }
+        }
+      }
+    },
+    "/admin/products/{id}": {
+      "put": {
+        "summary": "Edit an existing product (Admin Only)",
+        "description": "Modifies catalog descriptions, prices, variant stock limits, or status flag.",
+        "security": [{ "BearerAuth": [] }],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "integer" }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Product updated successfully." },
+          "404": { "description": "Product not found." }
+        }
+      },
+      "delete": {
+        "summary": "Delete a product profile (Admin Only)",
+        "description": "Removes a product profile and its nested attributes/variants from the system catalog.",
+        "security": [{ "BearerAuth": [] }],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "integer" }
+          }
+        ],
+        "responses": {
+          "200": { "description": "Product deleted successfully." },
+          "404": { "description": "Product not found." }
+        }
+      }
+    },
+    "/admin/orders": {
+      "get": {
+        "summary": "Retrieve all customer orders (Admin Only)",
+        "description": "Returns full order transaction list for packaging and shipping fulfillment dashboards.",
+        "security": [{ "BearerAuth": [] }],
+        "responses": {
+          "200": {
+            "description": "Fulfillment order records list.",
+            "content": {
+              "application/json": {
+                "schema": { "type": "array", "items": { "type": "object" } }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/orders/{id}": {
+      "put": {
+        "summary": "Fulfill/Update order status (Admin Only)",
+        "description": "Adjusts shipping stage or processing state flags on customer orders.",
+        "security": [{ "BearerAuth": [] }],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "integer" }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["status"],
+                "properties": {
+                  "status": { "type": "string", "example": "Shipped" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Order status updated successfully." },
+          "404": { "description": "Order record not found." }
+        }
+      }
+    },
+    "/ai/generate-content": {
+      "post": {
+        "summary": "Generate product catalog details via Gemini",
+        "description": "Prompts Gemini flash model to generate professional descriptions, key features, storage guidelines, and consistent photorealistic packaging prompt structures.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["name", "category"],
+                "properties": {
+                  "name": { "type": "string", "example": "Pearl Millet" },
+                  "category": { "type": "string", "example": "Grains" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully generated content object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": { "type": "boolean" },
+                    "content": { "type": "object" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ai/generate-image": {
+      "post": {
+        "summary": "Generate photorealistic packaging mockup via Imagen",
+        "description": "Generates a packaging mockup image matching the studio kitchen setting using the Google Gemini Imagen API (falls back to high-fidelity compliant SVG mockup on free-tier projects).",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["prompt"],
+                "properties": {
+                  "prompt": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Image successfully generated (returns data URL or base64 jpeg).",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": { "type": "boolean" },
+                    "imageUrl": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "BearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}

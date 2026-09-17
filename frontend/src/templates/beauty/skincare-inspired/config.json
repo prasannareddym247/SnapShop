@@ -1,0 +1,69 @@
+{
+  "id": "skincare-inspired",
+  "name": "Pure SkinGlow",
+  "category": "beauty",
+  "tagline": "Clean, natural, dermatologist-inspired skincare — pure ingredients for radiant skin",
+  "storeName": "Pure SkinGlow",
+  "description": "Premium skincare & wellness storefront with clean minimalist design, sage green palette, and calming natural aesthetic.",
+  "palette": {
+    "primary": "#7eb8a0",
+    "secondary": "#c4a882",
+    "accent": "#e8e0d4",
+    "bg": "#faf9f7",
+    "bgAlt": "#f4f1ec",
+    "surface": "#ffffff",
+    "text": "#2c3e3a",
+    "textMuted": "#8a9e94",
+    "border": "#e4ddd4",
+    "success": "#7eb8a0",
+    "error": "#c97070"
+  },
+  "typography": {
+    "headingFont": "Outfit, sans-serif",
+    "bodyFont": "Inter, sans-serif",
+    "accentFont": "DM Serif Display, serif"
+  },
+  "spacing": {
+    "xs": "0.25rem",
+    "sm": "0.5rem",
+    "md": "1rem",
+    "lg": "1.5rem",
+    "xl": "2.5rem",
+    "2xl": "4rem"
+  },
+  "borderRadius": {
+    "sm": "8px",
+    "md": "12px",
+    "lg": "16px"
+  },
+  "headerVariant": "default",
+  "headerSticky": true,
+  "footerColumns": [
+    {
+      "title": "Shop",
+      "links": ["Cleansers", "Serums", "Moisturizers", "Sunscreen", "Face Masks", "Wellness"]
+    },
+    {
+      "title": "Learn",
+      "links": ["About Us", "Skincare Routine", "Ingredient Glossary", "Blog", "FAQs"]
+    },
+    {
+      "title": "Support",
+      "links": ["Contact", "Help Center", "Shipping & Returns", "Privacy Policy", "Terms"]
+    }
+  ],
+  "socialLinks": [
+    { "icon": "📸", "label": "Instagram" },
+    { "icon": "🐦", "label": "Twitter/X" },
+    { "icon": "📘", "label": "Facebook" },
+    { "icon": "▶️", "label": "YouTube" },
+    { "icon": "💡", "label": "TikTok" }
+  ],
+  "previewPanel": {
+    "templateName": "Pure SkinGlow",
+    "category": "Skincare & Wellness",
+    "style": "Clean · Natural · Minimal",
+    "bestFor": "Skincare, Organic Beauty, Wellness, Self-Care, Dermatology Products, Natural Cosmetics",
+    "responsive": "Desktop · Tablet · Mobile"
+  }
+}

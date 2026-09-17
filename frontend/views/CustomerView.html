@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SnapShop - Customer Dashboard View</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --primary: #3b82f6;
+      --primary-dark: #1e3a8a;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --radius: 12px;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      padding: 2rem 1rem;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: #dbeafe;
+      color: #1e40af;
+      border: 1px solid #dbeafe;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+    .badge-dot {
+      width: 10px;
+      height: 10px;
+      background-color: #3b82f6;
+      border-radius: 50%;
+    }
+    header {
+      max-width: 900px;
+      margin: 0 auto 2.5rem auto;
+      text-align: center;
+    }
+    h1 { font-size: 2.2rem; font-weight: 800; color: var(--primary-dark); margin-bottom: 0.5rem; }
+    .nav-preview {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: var(--shadow);
+      max-width: 900px;
+      margin: 0 auto 2rem auto;
+    }
+    .logo { font-weight: 800; font-size: 1.3rem; color: #10b981; letter-spacing: 1px; }
+    .links { display: flex; gap: 1.5rem; list-style: none; font-size: 0.95rem; }
+    .links a { text-decoration: none; color: var(--text-muted); font-weight: 600; }
+    .links a.active { color: var(--primary); }
+    .btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.5rem 1.2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      box-shadow: var(--shadow);
+    }
+    .cart-summary {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 0;
+    }
+    .subtotal-box {
+      background: #f8fafc;
+      padding: 1rem;
+      border-radius: 6px;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="badge">
+      <span class="badge-dot"></span>
+      AUTHENTICATED ROLE: CUSTOMER
+    </div>
+    <h1>🛍️ Shopping Cart & Order Tracking View</h1>
+    <p style="color: var(--text-muted)">This screen requires customer authentication to view the cart, checkout, and order history.</p>
+  </header>
+
+  <div class="nav-preview">
+    <div class="logo">FRESHMART</div>
+    <ul class="links">
+      <li><a href="#">Catalog</a></li>
+      <li><a href="#" class="active">Cart (2)</a></li>
+      <li><a href="#">My Orders</a></li>
+    </ul>
+    <div style="display: flex; align-items: center; gap: 1rem;">
+      <span style="font-size: 0.9rem; font-weight: 600; color: var(--text);">John Doe</span>
+      <a href="#" class="btn" style="background: #ef4444;">Logout</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--primary-dark)">Your Shopping Cart</h2>
+    <div class="cart-summary">
+      <div class="cart-item">
+        <div>
+          <strong>Premium Basmati Rice</strong>
+          <div style="font-size: 0.8rem; color: var(--text-muted)">1 kg packet</div>
+        </div>
+        <div>Qty: 2</div>
+        <strong>₹300.00</strong>
+      </div>
+      <div class="cart-item">
+        <div>
+          <strong>Coriander Powder</strong>
+          <div style="font-size: 0.8rem; color: var(--text-muted)">500g packet</div>
+        </div>
+        <div>Qty: 1</div>
+        <strong>₹95.00</strong>
+      </div>
+    </div>
+
+    <div class="subtotal-box">
+      <p style="font-size: 0.9rem; color: var(--text-muted)">Subtotal: <span style="font-weight: 600; color: var(--text)">₹395.00</span></p>
+      <p style="font-size: 0.9rem; color: var(--text-muted)">Estimated Tax (5% GST): <span style="font-weight: 600; color: var(--text)">₹19.75</span></p>
+      <h3 style="font-size: 1.3rem; margin-top: 0.5rem; color: var(--primary-dark)">Total: ₹414.75</h3>
+      <button class="btn" style="margin-top: 1rem;" disabled>Proceed to Secure Checkout</button>
+    </div>
+  </div>
+</body>
+</html>

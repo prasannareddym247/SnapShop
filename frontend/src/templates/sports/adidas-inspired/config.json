@@ -1,0 +1,78 @@
+{
+  "id": "adidas-inspired",
+  "name": "ThreeStripes Club",
+  "category": "sports",
+  "tagline": "Classic heritage activewear and streetwear sneakers",
+  "storeName": "ThreeStripes Store",
+  "description": "Heritage tracksuits, sambas, Gazelle sneakers, and performance socks.",
+  "palette": {
+    "primary": "#0284c7",
+    "secondary": "#0f172a",
+    "accent": "#0284c7",
+    "bg": "#f0f9ff",
+    "bgAlt": "#e0f2fe",
+    "surface": "#ffffff",
+    "text": "#0f172a",
+    "textMuted": "#475569",
+    "border": "#bae6fd",
+    "success": "#4caf50",
+    "error": "#f44336"
+  },
+  "darkPalette": {
+    "primary": "#38bdf8",
+    "secondary": "#bae6fd",
+    "accent": "#0284c7",
+    "bg": "#081521",
+    "surface": "#0f172a",
+    "text": "#f0f9ff",
+    "textMuted": "#475569",
+    "border": "#bae6fd",
+    "success": "#66bb6a",
+    "error": "#ef5350"
+  },
+  "typography": {
+    "headingFont": "Montserrat, sans-serif",
+    "bodyFont": "Inter, sans-serif",
+    "accentFont": "Rubik Black"
+  },
+  "spacing": {
+    "xs": "0.25rem",
+    "sm": "0.5rem",
+    "md": "1rem",
+    "lg": "1.5rem",
+    "xl": "2rem",
+    "2xl": "3rem"
+  },
+  "borderRadius": {
+    "sm": "0.5rem",
+    "md": "0.75rem",
+    "lg": "1rem"
+  },
+  "headerVariant": "default",
+  "headerSticky": true,
+  "footerColumns": [
+    {
+      "title": "Heritage",
+      "links": [
+        "Tracksuits",
+        "Suede Sneakers",
+        "Duffel Bags",
+        "Headbands"
+      ]
+    }
+  ],
+  "socialLinks": [
+    {
+      "icon": "📸",
+      "label": "Instagram"
+    },
+    {
+      "icon": "🐦",
+      "label": "Twitter"
+    },
+    {
+      "icon": "📘",
+      "label": "Facebook"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "id": "modern-inspired",
+  "name": "ModFurniture Design",
+  "category": "home-living",
+  "tagline": "Architect-designed contemporary living pieces",
+  "storeName": "ModLiving",
+  "description": "Modernist fabric sofas, marble coffee tables, metal shelving units, and lounge chairs.",
+  "palette": {
+    "primary": "#475569",
+    "secondary": "#334155",
+    "accent": "#f59e0b",
+    "bg": "#f8fafc",
+    "bgAlt": "#e2e8f0",
+    "surface": "#ffffff",
+    "text": "#0f172a",
+    "textMuted": "#64748b",
+    "border": "#cbd5e1",
+    "success": "#4caf50",
+    "error": "#f44336"
+  },
+  "darkPalette": {
+    "primary": "#94a3b8",
+    "secondary": "#cbd5e1",
+    "accent": "#f59e0b",
+    "bg": "#0f172a",
+    "surface": "#1e293b",
+    "text": "#f8fafc",
+    "textMuted": "#64748b",
+    "border": "#cbd5e1",
+    "success": "#66bb6a",
+    "error": "#ef5350"
+  },
+  "typography": {
+    "headingFont": "Montserrat, sans-serif",
+    "bodyFont": "Inter, sans-serif",
+    "accentFont": "Questrial"
+  },
+  "spacing": {
+    "xs": "0.25rem",
+    "sm": "0.5rem",
+    "md": "1rem",
+    "lg": "1.5rem",
+    "xl": "2rem",
+    "2xl": "3rem"
+  },
+  "borderRadius": {
+    "sm": "0px",
+    "md": "8px",
+    "lg": "16px"
+  },
+  "headerVariant": "default",
+  "headerSticky": true,
+  "footerColumns": [
+    {
+      "title": "Mod Living",
+      "links": [
+        "Sofa Sets",
+        "Coffee Tables",
+        "Shelves",
+        "Lounge Chairs"
+      ]
+    }
+  ],
+  "socialLinks": [
+    {
+      "icon": "📸",
+      "label": "Instagram"
+    },
+    {
+      "icon": "🐦",
+      "label": "Twitter"
+    },
+    {
+      "icon": "📘",
+      "label": "Facebook"
+    }
+  ]
+}

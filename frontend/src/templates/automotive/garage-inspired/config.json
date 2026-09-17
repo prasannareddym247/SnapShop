@@ -1,0 +1,78 @@
+{
+  "id": "garage-inspired",
+  "name": "GarageTool Pro",
+  "category": "automotive",
+  "tagline": "Professional hydraulic jacks, socket sets, car polish",
+  "storeName": "GaragePro",
+  "description": "Heavy duty hydraulic floor jacks, chrome vanadium socket wrenches, and polishers.",
+  "palette": {
+    "primary": "#dc2626",
+    "secondary": "#111827",
+    "accent": "#dc2626",
+    "bg": "#fafafa",
+    "bgAlt": "#f3f4f6",
+    "surface": "#ffffff",
+    "text": "#111827",
+    "textMuted": "#4b5563",
+    "border": "#e5e7eb",
+    "success": "#4caf50",
+    "error": "#f44336"
+  },
+  "darkPalette": {
+    "primary": "#ef4444",
+    "secondary": "#f3f4f6",
+    "accent": "#dc2626",
+    "bg": "#130505",
+    "surface": "#111827",
+    "text": "#f9fafb",
+    "textMuted": "#4b5563",
+    "border": "#e5e7eb",
+    "success": "#66bb6a",
+    "error": "#ef5350"
+  },
+  "typography": {
+    "headingFont": "Share Tech, sans-serif",
+    "bodyFont": "Teko, sans-serif",
+    "accentFont": "Electrolize"
+  },
+  "spacing": {
+    "xs": "0.25rem",
+    "sm": "0.5rem",
+    "md": "1rem",
+    "lg": "1.5rem",
+    "xl": "2rem",
+    "2xl": "3rem"
+  },
+  "borderRadius": {
+    "sm": "4px",
+    "md": "6px",
+    "lg": "10px"
+  },
+  "headerVariant": "default",
+  "headerSticky": true,
+  "footerColumns": [
+    {
+      "title": "Garage tools",
+      "links": [
+        "Floor Jacks",
+        "Socket Wrenches",
+        "Diagnostic Scanners",
+        "Buffers"
+      ]
+    }
+  ],
+  "socialLinks": [
+    {
+      "icon": "📸",
+      "label": "Instagram"
+    },
+    {
+      "icon": "🐦",
+      "label": "Twitter"
+    },
+    {
+      "icon": "📘",
+      "label": "Facebook"
+    }
+  ]
+}

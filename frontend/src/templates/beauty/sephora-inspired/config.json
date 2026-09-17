@@ -1,0 +1,90 @@
+{
+  "id": "sephora-inspired",
+  "name": "Beauty Luxe",
+  "category": "beauty",
+  "tagline": "Premium beauty & cosmetics store reimagined",
+  "storeName": "Beauty Luxe",
+  "description": "A sophisticated beauty & cosmetics storefront with editorial elegance and premium shopping experience.",
+  "previewPanel": {
+    "name": "Beauty Luxe",
+    "category": "Beauty & Cosmetics",
+    "style": "Modern · Elegant · Luxury",
+    "bestFor": "Cosmetics, Skincare, Makeup, Fragrance, Hair Care, Beauty Accessories",
+    "responsive": "Desktop, Tablet, Mobile",
+    "image": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&auto=format&fit=crop&q=80"
+  },
+  "palette": {
+    "primary": "#000000",
+    "secondary": "#1a1a1a",
+    "accent": "#c9a96e",
+    "accent2": "#f5e6d3",
+    "blush": "#f3d7da",
+    "bg": "#fcfaf8",
+    "bgAlt": "#f8f5f1",
+    "surface": "#ffffff",
+    "text": "#1a1a1a",
+    "textMuted": "#8a8a8a",
+    "border": "#e8e0d8",
+    "success": "#4caf50",
+    "error": "#d32f2f"
+  },
+  "darkPalette": {
+    "primary": "#ffffff",
+    "secondary": "#cccccc",
+    "accent": "#d4b87a",
+    "accent2": "#3d3025",
+    "blush": "#4a2528",
+    "bg": "#121212",
+    "bgAlt": "#1e1e1e",
+    "surface": "#1c1c1c",
+    "text": "#f0ece8",
+    "textMuted": "#8a8a8a",
+    "border": "#333333",
+    "success": "#66bb6a",
+    "error": "#ef5350"
+  },
+  "typography": {
+    "headingFont": "\"Playfair Display\", Georgia, serif",
+    "bodyFont": "Inter, -apple-system, sans-serif",
+    "accentFont": "\"Cormorant Garamond\", Georgia, serif"
+  },
+  "spacing": {
+    "xs": "0.25rem",
+    "sm": "0.5rem",
+    "md": "1rem",
+    "lg": "2rem",
+    "xl": "3rem",
+    "2xl": "5rem"
+  },
+  "borderRadius": {
+    "sm": "4px",
+    "md": "12px",
+    "lg": "20px"
+  },
+  "headerVariant": "default",
+  "headerSticky": true,
+  "footerColumns": [
+    {
+      "title": "Shop",
+      "links": ["New Arrivals", "Makeup", "Skincare", "Fragrance", "Hair Care", "Brands", "Sale"]
+    },
+    {
+      "title": "About",
+      "links": ["Our Story", "Sustainability", "Press", "Careers"]
+    },
+    {
+      "title": "Help",
+      "links": ["FAQ", "Shipping", "Returns", "Size Guide", "Contact Us"]
+    },
+    {
+      "title": "Connect",
+      "links": ["Instagram", "YouTube", "Pinterest", "TikTok"]
+    }
+  ],
+  "socialLinks": [
+    { "icon": "📸", "label": "Instagram" },
+    { "icon": "▶️", "label": "YouTube" },
+    { "icon": "📌", "label": "Pinterest" },
+    { "icon": "🎵", "label": "TikTok" }
+  ]
+}

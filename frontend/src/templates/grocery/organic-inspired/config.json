@@ -1,0 +1,78 @@
+{
+  "id": "organic-inspired",
+  "name": "NatureOrganics",
+  "category": "grocery",
+  "tagline": "100% certified organic farm-to-table foods",
+  "storeName": "NatureOrganics",
+  "description": "Pesticide-free leafy greens, cold-pressed sunflower oils, brown sugar, and organic tea.",
+  "palette": {
+    "primary": "#059669",
+    "secondary": "#065f46",
+    "accent": "#fbbf24",
+    "bg": "#ecfdf5",
+    "bgAlt": "#d1fae5",
+    "surface": "#ffffff",
+    "text": "#064e3b",
+    "textMuted": "#047857",
+    "border": "#a7f3d0",
+    "success": "#4caf50",
+    "error": "#f44336"
+  },
+  "darkPalette": {
+    "primary": "#34d399",
+    "secondary": "#a7f3d0",
+    "accent": "#fbbf24",
+    "bg": "#0b2015",
+    "surface": "#123524",
+    "text": "#ecfdf5",
+    "textMuted": "#047857",
+    "border": "#a7f3d0",
+    "success": "#66bb6a",
+    "error": "#ef5350"
+  },
+  "typography": {
+    "headingFont": "Lora, serif",
+    "bodyFont": "Quicksand, sans-serif",
+    "accentFont": "Pacifico"
+  },
+  "spacing": {
+    "xs": "0.25rem",
+    "sm": "0.5rem",
+    "md": "1rem",
+    "lg": "1.5rem",
+    "xl": "2rem",
+    "2xl": "3rem"
+  },
+  "borderRadius": {
+    "sm": "12px",
+    "md": "16px",
+    "lg": "24px"
+  },
+  "headerVariant": "default",
+  "headerSticky": true,
+  "footerColumns": [
+    {
+      "title": "Nature",
+      "links": [
+        "Veggies",
+        "Cold-Pressed Oils",
+        "Tea & Coffee",
+        "Brown Sugar"
+      ]
+    }
+  ],
+  "socialLinks": [
+    {
+      "icon": "📸",
+      "label": "Instagram"
+    },
+    {
+      "icon": "🐦",
+      "label": "Twitter"
+    },
+    {
+      "icon": "📘",
+      "label": "Facebook"
+    }
+  ]
+}

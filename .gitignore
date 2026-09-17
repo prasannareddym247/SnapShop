@@ -1,0 +1,66 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Environment variables & secrets
+.env
+.env.*
+!.env.example
+*.env
+backend/.env
+frontend/.env
+
+# Production builds
+dist/
+build/
+frontend/dist/
+
+# Logs & debug outputs
+logs/
+*.log
+*.err
+stdout.txt
+stderr.txt
+backend/server.log
+backend/server.err
+backend/server-start.log
+backend/server-start.err
+backend/server_err.log
+backend/debug.log
+
+# Scratch, temp & memory files
+scratch/
+brain/
+cookies.txt
+*.tmp
+backups/
+
+# System and Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Root temporary / audit dumps & reports
+*_REPORT.md
+*_SUMMARY.md
+*_CHECKLIST.md
+*_UPDATE.md
+*_GUIDE.md
+ARCHITECTURE.md
+BACKUP_RECOVERY.md
+CREDENTIALS.md
+DEPLOYMENT.md
+*_REVIEW.md
+SECURITY_REVIEW.md
+SETUP.md
+TROUBLESHOOTING.md
+freshkart_content_catalog.md
+dummyjson_products.json
+fashion_catalog.json
+prices_check.json
+docker/
+docker-compose.yml
+Dockerfile.*
+.dockerignore
+.github/

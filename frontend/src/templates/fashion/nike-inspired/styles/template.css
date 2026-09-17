@@ -1,0 +1,796 @@
+.sports-template {
+  --font-heading: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-body: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-body);
+  color: var(--text-color, #111);
+  background: var(--bg-color, #fafafa);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ========== Preview Panel ========== */
+.sp-preview-panel {
+  position: fixed;
+  top: 60px;
+  right: 0;
+  width: 300px;
+  background: #fff;
+  border-left: 1px solid #e0e0e0;
+  z-index: 90;
+  padding: 1.5rem;
+  box-shadow: -4px 0 20px rgba(0,0,0,0.08);
+  max-height: calc(100vh - 60px);
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+}
+
+.sp-preview-panel h3 {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0 0 1rem;
+  color: #111;
+}
+
+.sp-preview-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.75rem;
+}
+
+.sp-preview-label {
+  color: #757575;
+  font-weight: 500;
+}
+
+.sp-preview-value {
+  color: #111;
+  font-weight: 600;
+  text-align: right;
+}
+
+.sp-preview-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.sp-btn-primary {
+  padding: 0.85rem;
+  background: #111;
+  color: #fff;
+  border: none;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: inherit;
+}
+
+.sp-btn-primary:hover {
+  background: #333;
+}
+
+.sp-btn-secondary {
+  padding: 0.85rem;
+  background: transparent;
+  color: #111;
+  border: 1px solid #111;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.sp-btn-secondary:hover {
+  background: #111;
+  color: #fff;
+}
+
+/* ========== Hero ========== */
+.sp-hero {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  min-height: 550px;
+  overflow: hidden;
+  background: #000;
+}
+
+.sp-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.65;
+  transition: transform 8s ease;
+}
+
+.sp-hero:hover .sp-hero-image {
+  transform: scale(1.05);
+}
+
+.sp-hero-content {
+  position: absolute;
+  bottom: 15%;
+  left: 6%;
+  max-width: 600px;
+  color: #fff;
+}
+
+.sp-hero-tag {
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  background: var(--accent-color, #00e676);
+  color: #000;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.sp-hero-title {
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 900;
+  line-height: 1;
+  margin: 0 0 1rem;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.sp-hero-subtitle {
+  font-size: 1.15rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  opacity: 0.85;
+  max-width: 450px;
+}
+
+.sp-btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: var(--accent-color, #00e676);
+  color: #000;
+  border: none;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.sp-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+.sp-btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.sp-btn-outline:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* ========== Sections ========== */
+.sp-section {
+  padding: 5rem 4%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.sp-section-dark {
+  background: #111;
+  color: #fff;
+  padding: 5rem 4%;
+}
+
+.sp-section-light {
+  background: #f5f5f5;
+  padding: 5rem 4%;
+}
+
+.sp-section-title {
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.sp-section-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-muted, #757575);
+  margin-bottom: 3rem;
+  font-weight: 400;
+  max-width: 500px;
+}
+
+.sp-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.sp-view-all {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-color, #111);
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #111;
+  padding-bottom: 0.25rem;
+  font-family: inherit;
+  transition: opacity 0.2s;
+}
+
+.sp-view-all:hover {
+  opacity: 0.6;
+}
+
+/* ========== Grids ========== */
+.sp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.sp-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+
+@media (max-width: 768px) {
+  .sp-grid-2 { grid-template-columns: 1fr; }
+}
+
+.sp-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+@media (max-width: 768px) {
+  .sp-grid-3 { grid-template-columns: 1fr; }
+}
+
+.sp-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+
+@media (max-width: 768px) {
+  .sp-grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ========== Product Card ========== */
+.sp-product-card {
+  position: relative;
+  background: var(--surface-color, #fff);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.sp-product-card:hover .sp-product-image {
+  transform: scale(1.05);
+}
+
+.sp-product-card:hover .sp-product-image-hover {
+  opacity: 1;
+}
+
+.sp-product-image-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 120%;
+  overflow: hidden;
+  background: var(--bg-alt, #f0f0f0);
+}
+
+.sp-product-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.sp-product-image-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.sp-product-info {
+  padding: 0.85rem 0;
+}
+
+.sp-product-brand {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted, #757575);
+  margin-bottom: 0.2rem;
+}
+
+.sp-product-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0 0 0.2rem;
+  line-height: 1.2;
+}
+
+.sp-product-price {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.sp-product-og-price {
+  font-size: 0.75rem;
+  color: var(--text-muted, #757575);
+  text-decoration: line-through;
+  margin-left: 0.4rem;
+}
+
+.sp-product-badge {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  padding: 0.2rem 0.6rem;
+  background: var(--accent-color, #00e676);
+  color: #000;
+  font-size: 0.55rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.sp-product-badge-new {
+  background: #111;
+  color: #fff;
+}
+
+.sp-product-wishlist {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 32px;
+  height: 32px;
+  background: rgba(255,255,255,0.9);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  z-index: 2;
+}
+
+.sp-product-wishlist:hover {
+  transform: scale(1.15);
+}
+
+.sp-color-dots {
+  display: flex;
+  gap: 0.3rem;
+  margin-top: 0.4rem;
+}
+
+.sp-color-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.sp-color-dot:hover {
+  transform: scale(1.3);
+}
+
+/* ========== Sport Categories ========== */
+.sp-sport-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.sp-sport-card {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.sp-sport-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.sp-sport-card:hover .sp-sport-image {
+  transform: scale(1.08);
+}
+
+.sp-sport-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  color: #fff;
+}
+
+.sp-sport-name {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sp-sport-count {
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+/* ========== Promo Banner ========== */
+.sp-promo {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  margin: 0 4% 3rem;
+  background: #000;
+}
+
+.sp-promo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  transition: transform 6s ease;
+}
+
+.sp-promo:hover .sp-promo-image {
+  transform: scale(1.05);
+}
+
+.sp-promo-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  width: 80%;
+  max-width: 550px;
+}
+
+.sp-promo-tag {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  opacity: 0.7;
+}
+
+.sp-promo-title {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.sp-promo-desc {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+
+/* ========== Category Cards ========== */
+.sp-cat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.sp-cat-card {
+  position: relative;
+  height: 320px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.sp-cat-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.sp-cat-card:hover .sp-cat-image {
+  transform: scale(1.06);
+}
+
+.sp-cat-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  background: linear-gradient(transparent, rgba(0,0,0,0.75));
+  color: #fff;
+}
+
+.sp-cat-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 0.15rem;
+  text-transform: uppercase;
+}
+
+.sp-cat-link {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent-color, #00e676);
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+}
+
+/* ========== Lifestyle ========== */
+.sp-lifestyle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  margin: 0 4%;
+}
+
+@media (max-width: 768px) {
+  .sp-lifestyle { grid-template-columns: 1fr; }
+}
+
+.sp-lifestyle-card {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.sp-lifestyle-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.sp-lifestyle-card:hover .sp-lifestyle-image {
+  transform: scale(1.05);
+}
+
+.sp-lifestyle-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2.5rem;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  color: #fff;
+}
+
+.sp-lifestyle-tag {
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  opacity: 0.7;
+}
+
+.sp-lifestyle-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin: 0 0 0.4rem;
+  text-transform: uppercase;
+}
+
+.sp-lifestyle-desc {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  max-width: 350px;
+  line-height: 1.5;
+}
+
+/* ========== Testimonials ========== */
+.sp-testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.sp-testimonial {
+  background: var(--surface-color, #fff);
+  padding: 2rem;
+  border: 1px solid var(--border-color, #e0e0e0);
+}
+
+.sp-testimonial-stars {
+  color: #00e676;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.sp-testimonial-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1.25rem;
+  font-style: italic;
+}
+
+.sp-testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sp-testimonial-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  object-fit: cover;
+}
+
+.sp-testimonial-name {
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.sp-testimonial-title {
+  font-size: 0.7rem;
+  color: var(--text-muted, #757575);
+  margin: 0;
+}
+
+/* ========== Newsletter ========== */
+.sp-newsletter {
+  padding: 5rem 4%;
+  text-align: center;
+  background: #111;
+  color: #fff;
+}
+
+.sp-newsletter-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0 0 0.5rem;
+}
+
+.sp-newsletter-desc {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-bottom: 2rem;
+}
+
+.sp-newsletter-form {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+  gap: 0;
+}
+
+.sp-newsletter-input {
+  flex: 1;
+  padding: 1rem 1.25rem;
+  border: none;
+  font-size: 0.85rem;
+  font-family: inherit;
+  outline: none;
+  background: #fff;
+  color: #111;
+}
+
+.sp-newsletter-btn {
+  padding: 1rem 2rem;
+  background: var(--accent-color, #00e676);
+  color: #000;
+  border: none;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: inherit;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+
+.sp-newsletter-btn:hover {
+  opacity: 0.9;
+}
+
+/* ========== Customization Indicators ========== */
+.sp-customize-badge {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background: rgba(0, 230, 118, 0.9);
+  color: #000;
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  z-index: 5;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.sp-customizable:hover .sp-customize-badge {
+  opacity: 1;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .sp-hero { height: 70vh; min-height: 400px; }
+  .sp-hero-content { bottom: 10%; left: 5%; right: 5%; }
+  .sp-hero-title { font-size: clamp(2rem, 10vw, 3rem); }
+  .sp-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 0.75rem; }
+  .sp-preview-panel { display: none; }
+  .sp-preview-panel.show { display: block; }
+  .sp-section { padding: 3rem 4%; }
+}
+
+@media (max-width: 480px) {
+  .sp-grid { grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
+  .sp-hero-title { font-size: 1.75rem; }
+  .sp-product-image-wrap { padding-top: 100%; }
+}

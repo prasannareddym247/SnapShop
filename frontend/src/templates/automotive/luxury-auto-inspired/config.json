@@ -1,0 +1,78 @@
+{
+  "id": "luxury-auto-inspired",
+  "name": "EliteDetail Auto",
+  "category": "automotive",
+  "tagline": "High-end ceramic coating, custom alloy wheels, wraps",
+  "storeName": "ApexAuto",
+  "description": "Ceramic car shampoo, custom forged alloy wheels, vinyl car wraps, and wax kits.",
+  "palette": {
+    "primary": "#111827",
+    "secondary": "#ef4444",
+    "accent": "#ffffff",
+    "bg": "#f9fafb",
+    "bgAlt": "#f3f4f6",
+    "surface": "#ffffff",
+    "text": "#111827",
+    "textMuted": "#4b5563",
+    "border": "#e5e7eb",
+    "success": "#4caf50",
+    "error": "#f44336"
+  },
+  "darkPalette": {
+    "primary": "#ffffff",
+    "secondary": "#f87171",
+    "accent": "#ffffff",
+    "bg": "#0b0f17",
+    "surface": "#111827",
+    "text": "#f9fafb",
+    "textMuted": "#4b5563",
+    "border": "#e5e7eb",
+    "success": "#66bb6a",
+    "error": "#ef5350"
+  },
+  "typography": {
+    "headingFont": "Cinzel, serif",
+    "bodyFont": "Inter, sans-serif",
+    "accentFont": "Cinzel Decorative"
+  },
+  "spacing": {
+    "xs": "0.25rem",
+    "sm": "0.5rem",
+    "md": "1rem",
+    "lg": "1.5rem",
+    "xl": "2rem",
+    "2xl": "3rem"
+  },
+  "borderRadius": {
+    "sm": "0px",
+    "md": "4px",
+    "lg": "8px"
+  },
+  "headerVariant": "default",
+  "headerSticky": true,
+  "footerColumns": [
+    {
+      "title": "Elite detailing",
+      "links": [
+        "9H Ceramics",
+        "Forged Wheels",
+        "Vinyl Wraps",
+        "Polishing Kits"
+      ]
+    }
+  ],
+  "socialLinks": [
+    {
+      "icon": "📸",
+      "label": "Instagram"
+    },
+    {
+      "icon": "🐦",
+      "label": "Twitter"
+    },
+    {
+      "icon": "📘",
+      "label": "Facebook"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "id": "nike-inspired",
+  "name": "Sports Performance",
+  "category": "fashion",
+  "tagline": "Engineered for champions — bold, fast, unstoppable",
+  "storeName": "SPORTS PERFORMANCE",
+  "description": "A premium sportswear storefront with bold typography, dynamic layouts, and an energetic athletic aesthetic.",
+  "palette": {
+    "primary": "#111111",
+    "secondary": "#2a2a2a",
+    "accent": "#00e676",
+    "bg": "#fafafa",
+    "bgAlt": "#f0f0f0",
+    "surface": "#ffffff",
+    "text": "#111111",
+    "textMuted": "#757575",
+    "border": "#e0e0e0",
+    "success": "#00e676",
+    "error": "#ff1744"
+  },
+  "darkPalette": {
+    "primary": "#ffffff",
+    "secondary": "#cccccc",
+    "accent": "#00e676",
+    "bg": "#0a0a0a",
+    "bgAlt": "#141414",
+    "surface": "#111111",
+    "text": "#f0f0f0",
+    "textMuted": "#888888",
+    "border": "#2a2a2a",
+    "success": "#00e676",
+    "error": "#ff5252"
+  },
+  "typography": {
+    "headingFont": "Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+    "bodyFont": "Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+    "accentFont": "Oswald, Montserrat, sans-serif"
+  },
+  "spacing": {
+    "xs": "0.25rem",
+    "sm": "0.5rem",
+    "md": "1rem",
+    "lg": "2rem",
+    "xl": "3rem",
+    "2xl": "5rem"
+  },
+  "borderRadius": {
+    "sm": "0px",
+    "md": "0px",
+    "lg": "0px"
+  },
+  "headerVariant": "minimal",
+  "headerSticky": true,
+  "footerColumns": [
+    {
+      "title": "Shop",
+      "links": ["New Arrivals", "Men", "Women", "Kids", "Sale", "Collections"]
+    },
+    {
+      "title": "Support",
+      "links": ["Contact Us", "FAQ", "Shipping", "Returns", "Size Guide"]
+    },
+    {
+      "title": "Company",
+      "links": ["About Us", "Careers", "Sustainability", "Press", "Privacy Policy", "Terms"]
+    }
+  ],
+  "socialLinks": [
+    { "icon": "IG", "label": "Instagram" },
+    { "icon": "TW", "label": "Twitter" },
+    { "icon": "YT", "label": "YouTube" },
+    { "icon": "FB", "label": "Facebook" },
+    { "icon": "TT", "label": "TikTok" }
+  ],
+  "previewPanel": {
+    "templateName": "Sports Performance",
+    "category": "Sports & Activewear",
+    "style": "Modern / Premium / Athletic",
+    "responsive": "Desktop, Tablet, Mobile",
+    "bestFor": "Sportswear, Footwear, Fitness Equipment, Outdoor Gear"
+  }
+}

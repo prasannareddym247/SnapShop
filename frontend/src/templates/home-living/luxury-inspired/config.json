@@ -1,0 +1,78 @@
+{
+  "id": "luxury-inspired",
+  "name": "LuxeInterior Casa",
+  "category": "home-living",
+  "tagline": "Italian leather, premium woods, elite styling",
+  "storeName": "LuxeCasa",
+  "description": "Plush velvet sofas, marble dining sets, velvet throw cushions, and crystal chandeliers.",
+  "palette": {
+    "primary": "#b45309",
+    "secondary": "#78350f",
+    "accent": "#fcd34d",
+    "bg": "#fffbeb",
+    "bgAlt": "#fef3c7",
+    "surface": "#ffffff",
+    "text": "#451a03",
+    "textMuted": "#92400e",
+    "border": "#fef3c7",
+    "success": "#4caf50",
+    "error": "#f44336"
+  },
+  "darkPalette": {
+    "primary": "#fbbf24",
+    "secondary": "#fef3c7",
+    "accent": "#fcd34d",
+    "bg": "#1c1008",
+    "surface": "#451a03",
+    "text": "#fffbeb",
+    "textMuted": "#92400e",
+    "border": "#fef3c7",
+    "success": "#66bb6a",
+    "error": "#ef5350"
+  },
+  "typography": {
+    "headingFont": "Cormorant Garamond, serif",
+    "bodyFont": "Lora, serif",
+    "accentFont": "Cinzel"
+  },
+  "spacing": {
+    "xs": "0.25rem",
+    "sm": "0.5rem",
+    "md": "1rem",
+    "lg": "1.5rem",
+    "xl": "2rem",
+    "2xl": "3rem"
+  },
+  "borderRadius": {
+    "sm": "0.25rem",
+    "md": "0.5rem",
+    "lg": "0.75rem"
+  },
+  "headerVariant": "default",
+  "headerSticky": true,
+  "footerColumns": [
+    {
+      "title": "Luxe Casa",
+      "links": [
+        "Velvet Sofas",
+        "Marble Sets",
+        "Lamps",
+        "Silk Pillows"
+      ]
+    }
+  ],
+  "socialLinks": [
+    {
+      "icon": "📸",
+      "label": "Instagram"
+    },
+    {
+      "icon": "🐦",
+      "label": "Twitter"
+    },
+    {
+      "icon": "📘",
+      "label": "Facebook"
+    }
+  ]
+}

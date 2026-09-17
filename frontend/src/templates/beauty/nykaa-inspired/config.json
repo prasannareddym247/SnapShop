@@ -1,0 +1,69 @@
+{
+  "id": "nykaa-inspired",
+  "name": "Glamour Nykaa",
+  "category": "beauty",
+  "tagline": "Your premium beauty destination — skincare, makeup, haircare, wellness, and fragrance",
+  "storeName": "Glamour Nykaa",
+  "description": "Premium beauty & personal care storefront with elegant modern design, soft rose palette, and seamless shopping experience.",
+  "palette": {
+    "primary": "#e0557a",
+    "secondary": "#d4a0b0",
+    "accent": "#f5e1e6",
+    "bg": "#fef9fb",
+    "bgAlt": "#fcf2f5",
+    "surface": "#ffffff",
+    "text": "#2d1420",
+    "textMuted": "#8a6b78",
+    "border": "#f0e0e5",
+    "success": "#4caf50",
+    "error": "#e0557a"
+  },
+  "typography": {
+    "headingFont": "Playfair Display, serif",
+    "bodyFont": "Inter, sans-serif",
+    "accentFont": "Cormorant Garamond, serif"
+  },
+  "spacing": {
+    "xs": "0.25rem",
+    "sm": "0.5rem",
+    "md": "1rem",
+    "lg": "1.5rem",
+    "xl": "2rem",
+    "2xl": "3rem"
+  },
+  "borderRadius": {
+    "sm": "4px",
+    "md": "8px",
+    "lg": "12px"
+  },
+  "headerVariant": "default",
+  "headerSticky": true,
+  "footerColumns": [
+    {
+      "title": "Shop",
+      "links": ["Makeup", "Skincare", "Hair Care", "Fragrance", "Wellness", "Personal Care"]
+    },
+    {
+      "title": "Help",
+      "links": ["About", "Contact", "Help Center", "Shipping & Returns", "FAQs"]
+    },
+    {
+      "title": "Policy",
+      "links": ["Privacy Policy", "Terms & Conditions", "Cookie Policy", "Returns"]
+    }
+  ],
+  "socialLinks": [
+    { "icon": "📸", "label": "Instagram" },
+    { "icon": "🐦", "label": "Twitter/X" },
+    { "icon": "📘", "label": "Facebook" },
+    { "icon": "▶️", "label": "YouTube" },
+    { "icon": "💬", "label": "WhatsApp" }
+  ],
+  "previewPanel": {
+    "templateName": "Glamour Nykaa",
+    "category": "Beauty & Personal Care",
+    "style": "Modern · Elegant · Clean",
+    "bestFor": "Cosmetics, Skincare, Haircare, Wellness, Fragrance, Personal Care",
+    "responsive": "Desktop · Tablet · Mobile"
+  }
+}

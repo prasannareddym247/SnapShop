@@ -1,0 +1,79 @@
+{
+  "id": "bigbasket-inspired",
+  "name": "BasketFresh Value",
+  "category": "grocery",
+  "tagline": "Weekly kitchen restocking and farm fresh savings",
+  "storeName": "BasketFresh",
+  "description": "Save big on monthly raw grains, spices, cleaning detergents, and premium basmati rice.",
+  "palette": {
+    "primary": "#84cc16",
+    "secondary": "#1e3a8a",
+    "accent": "#f59e0b",
+    "bg": "#f7fee7",
+    "bgAlt": "#d9f99d",
+    "surface": "#ffffff",
+    "text": "#0f172a",
+    "textMuted": "#475569",
+    "border": "#cbd5e1",
+    "success": "#4caf50",
+    "error": "#f44336"
+  },
+  "darkPalette": {
+    "primary": "#a3e635",
+    "secondary": "#93c5fd",
+    "accent": "#f59e0b",
+    "bg": "#141c0f",
+    "surface": "#212d19",
+    "text": "#f7fee7",
+    "textMuted": "#475569",
+    "border": "#cbd5e1",
+    "success": "#66bb6a",
+    "error": "#ef5350"
+  },
+  "typography": {
+    "headingFont": "Ubuntu, sans-serif",
+    "bodyFont": "system-ui, sans-serif",
+    "accentFont": "Cabin"
+  },
+  "spacing": {
+    "xs": "0.25rem",
+    "sm": "0.5rem",
+    "md": "1rem",
+    "lg": "1.5rem",
+    "xl": "2rem",
+    "2xl": "3rem"
+  },
+  "borderRadius": {
+    "sm": "4px",
+    "md": "6px",
+    "lg": "10px"
+  },
+  "headerVariant": "default",
+  "headerSticky": true,
+  "footerColumns": [
+    {
+      "title": "Grocery",
+      "links": [
+        "Dals & Pulses",
+        "Cooking Oils",
+        "Household",
+        "Snacks",
+        "Chocolates"
+      ]
+    }
+  ],
+  "socialLinks": [
+    {
+      "icon": "📸",
+      "label": "Instagram"
+    },
+    {
+      "icon": "🐦",
+      "label": "Twitter"
+    },
+    {
+      "icon": "📘",
+      "label": "Facebook"
+    }
+  ]
+}
