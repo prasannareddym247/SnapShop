@@ -10,10 +10,12 @@ node_modules/
 backend/.env
 frontend/.env
 
-# Production builds
+# Production builds & cache
 dist/
 build/
 frontend/dist/
+.vite/
+*/.vite/
 
 # Logs & debug outputs
 logs/
