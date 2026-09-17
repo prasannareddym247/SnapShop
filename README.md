@@ -18,30 +18,30 @@ Prerequisites: Node.js, npm. SQL Server optional (project will fall back to JSON
 1. Install dependencies:
 
 ```bash
-npm install
-npm install --prefix backend
-npm install --prefix frontend
+# Install both backend and frontend dependencies
+npm run install:all
 ```
 
-2. Set environment variables (optional but recommended):
+*(Or install individually: `npm install --prefix backend` and `npm install --prefix frontend`)*
 
-- `JWT_SECRET` — strong secret for signing JWTs
-- SQL connection is configured in `backend/database.js` for Windows Integrated Security. To use SQL Server, ensure the connection string and permissions are correct. Otherwise the app will use the JSON fallback.
+2. Environment variables:
+- Zero-config by default: If no `.env` is provided, the app automatically runs in local development mode using a safe default key and the JSON database fallback.
+- Optional: Copy `backend/.env.example` to `backend/.env` to customize ports, SQL Server, or JWT keys.
 
-3. Run server and client separately (recommended):
+3. Run the application:
 
 ```bash
-# start server
-npm run start --prefix backend
-
-# start client (in another terminal)
-npm run dev --prefix frontend
+# Run backend and frontend concurrently
+npm run dev
 ```
 
-Or run both together (requires `concurrently`):
+* Backend API: `http://localhost:5000`
+* Frontend UI: `http://localhost:5173`
 
+Or run separately in two terminals:
 ```bash
-npm run dev --prefix .
+npm run dev:backend
+npm run dev:frontend
 ```
 
 API

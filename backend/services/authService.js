@@ -1,15 +1,19 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
-if (!process.env.JWT_SECRET) {
-  console.error('\n======================================================');
-  console.error('FATAL ERROR: JWT_SECRET is not defined in the environment variables.');
-  console.error('Please configure JWT_SECRET in your backend/.env file.');
-  console.error('======================================================\n');
-  process.exit(1);
+let JWT_SECRET = process.env.JWT_SECRET;
+if (!JWT_SECRET) {
+  if (process.env.NODE_ENV === 'production') {
+    console.error('\n======================================================');
+    console.error('FATAL ERROR: JWT_SECRET is not defined in the environment variables.');
+    console.error('Please configure JWT_SECRET in your backend/.env file.');
+    console.error('======================================================\n');
+    process.exit(1);
+  } else {
+    JWT_SECRET = 'freshkart-dev-secret-key-replace-in-production';
+    console.warn('[AUTH] Warning: JWT_SECRET not set in .env. Using default key for local development.');
+  }
 }
-
-const JWT_SECRET = process.env.JWT_SECRET;
 
 const authService = {
   JWT_SECRET,
